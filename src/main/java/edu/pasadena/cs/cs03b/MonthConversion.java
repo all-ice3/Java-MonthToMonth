@@ -16,7 +16,7 @@ public class MonthConversion {
             case 3:  monthString = "March";
                      break;
             // TODO: Add the rest of the months here
-            // TODO: add a default case
+            // TODO: add a default case to output "No Such Month"
         }
         
         System.out.println(monthString);
