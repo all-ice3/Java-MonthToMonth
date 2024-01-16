@@ -14,64 +14,58 @@ public class TestMonthConversion {
    @Test
    public void testMonthConversion()
    {
-     PrintStream originalOut = System.out;
-     ByteArrayOutputStream bos = new ByteArrayOutputStream();
-     System.setOut(new PrintStream(bos));
-
      // action
-     MonthConversion.main(new String[]{"1"});
+     String strResult = MonthConversion.convertMonth(1);
      // assertion
-     assertEquals("January\n", bos.toString());
+     assertEquals("January", strResult);
 
-     MonthConversion.main(new String[]{"2"});
+     strResult = MonthConversion.convertMonth(2);
      // assertion
-     assertEquals("February\n", bos.toString());
+     assertEquals("February", strResult);
 
-     MonthConversion.main(new String[]{"3"});
+     strResult = MonthConversion.convertMonth(3);
      // assertion
-     assertEquals("March\n", bos.toString());
+     assertEquals("March", strResult);
 
-     MonthConversion.main(new String[]{"4"});
+     strResult = MonthConversion.convertMonth(4);
      // assertion
-     assertEquals("April\n", bos.toString());
+     assertEquals("April", strResult);
 
-     MonthConversion.main(new String[]{"5"});
+     strResult = MonthConversion.convertMonth(5);
      // assertion
-     assertEquals("May\n", bos.toString());
+     assertEquals("May", strResult);
 
-     MonthConversion.main(new String[]{"6"});
+     strResult = MonthConversion.convertMonth(6);
      // assertion
-     assertEquals("June\n", bos.toString());
-      
-     MonthConversion.main(new String[]{"7"});
-     // assertion
-     assertEquals("July\n", bos.toString());
+     assertEquals("June", strResult);
 
-     MonthConversion.main(new String[]{"8"});
+     strResult = MonthConversion.convertMonth(7);
      // assertion
-     assertEquals("August\n", bos.toString());
-      
-     MonthConversion.main(new String[]{"9"});
-     // assertion
-     assertEquals("September\n", bos.toString());
+     assertEquals("July", strResult);
 
-     MonthConversion.main(new String[]{"10"});
+     strResult = MonthConversion.convertMonth(8);
      // assertion
-     assertEquals("October\n", bos.toString());
+     assertEquals("August", strResult);
 
-     MonthConversion.main(new String[]{"11"});
+     strResult = MonthConversion.convertMonth(9);
      // assertion
-     assertEquals("November\n", bos.toString());
+     assertEquals("September", strResult);
 
-     MonthConversion.main(new String[]{"12"});
+     strResult = MonthConversion.convertMonth(10);
      // assertion
-     assertEquals("December\n", bos.toString());
+     assertEquals("October", strResult);
 
-     MonthConversion.main(new String[]{"13"});
+     strResult = MonthConversion.convertMonth(11);
      // assertion
-     assertEquals("No Such Month\n", bos.toString());
+     assertEquals("November", strResult);
 
-     // undo the binding in System
-     System.setOut(originalOut);
+     strResult = MonthConversion.convertMonth(12);
+     // assertion
+     assertEquals("December", strResult);
+
+     strResult = MonthConversion.convertMonth(13);
+     // assertion
+     assertEquals("\"No Such Month", strResult);     
+
    }
 }
