@@ -65,7 +65,7 @@ public class TestMonthConversion {
 
      strResult = MonthConversion.convertMonth(13);
      // assertion
-     assertEquals("\"No Such Month", strResult);     
+     assertEquals("No Such Month", strResult);     
 
    }
 }
